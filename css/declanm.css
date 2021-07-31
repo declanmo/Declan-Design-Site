@@ -1,0 +1,59 @@
+
+h1, h2, h3 {
+    
+font-family: 'Baskerville', sans-serif;
+
+}
+h4, h5, h6, p {
+    font-family: 'Baskerville', sans-serif;
+}
+#mobile-menu {
+    font-family: 'Baskerville';
+}
+.app {
+    background-color:rgba(255,255,255,0.1);
+    overflow:hidden;
+    height:100vh;
+    width:100vw;
+    
+}
+#grad-ball-1 {
+    height: 110%;
+    width:130%;
+    position:absolute;
+    z-index:-1;
+    filter:blur(6px);
+    overflow: hidden;
+}
+#grad-ball-2 {
+    background: rgb(131,196,235);
+background: radial-gradient(circle, rgba(131,196,235,1) 0%, rgba(127,247,217,1) 29%, rgba(255,255,255,0.6348740179665616) 72%, rgba(255,255,255,0) 100%);
+left:80%;
+top:80%;
+}
+
+.hero-text {
+    line-height:1.2em;
+}
+#mobile-menu a:hover {
+    text-decoration: underline;
+}
+/*#project-page .project-img {
+    border:8px solid black;
+}*/
+#menu-btn {
+    right:3%;
+    top:4%;
+    z-index:99;
+
+}
+@media (min-width:1720px) {
+    html {
+        font-size:22px
+    }
+}
+@media (min-width:2000px) {
+    html {
+        font-size:26px
+    }
+}
