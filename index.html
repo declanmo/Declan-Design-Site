@@ -2,178 +2,111 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <title>Declan Design</title>
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-  <link href="css/declanm.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
-    
-    
+    <meta charset="utf-8" />
+    <title>DeclanM - Website Developer</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/declanm.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body class="relative overflow-hidden h-screen w-screen">
-  <div id="grad-ball-1"></div>
-  <div class="absolute" id="menu-btn">
-    <nav class="">
-      <!-- Mobile menu button -->
-      <button type="button" class="p-2 nav-icon">
+    <div id="grad-ball-1"></div>
+    <div class="absolute" id="menu-btn">
+        <nav class="">
+            <!-- Mobile menu button -->
+            <button type="button" class="p-2 nav-icon">
         <span class="sr-only">Open main menu</span>
         <!--
             Heroicon name: outline/menu
 
             Menu open: "hidden", Menu closed: "block"
           -->
-        <img class="" src="assets/Menu Plus.svg">
+        <img class="w-12" src="assets/Menu Plus.svg">
       </button>
-      <!-- Mobile menu, show/hide based on menu state. -->
+            <!-- Mobile menu, show/hide based on menu state. -->
 
 
-    </nav>
-  </div>
-  <section id="home-page" class="app h-screen w-screen p-12 ">
-    
-    <!--<div id="grad-ball-2"></div>
-    <div id="grad-ball-3"></div>-->
-    <!-- This example requires Tailwind CSS v2.0+ -->
-
-    <div class="px-4 grid grid-cols-12">
-      <div class="col-span-10 flex flex-col justify-center h-full">
-        <h1 class="leading-none pb-10 text-9xl hero-text">Declan M <br><i>Website Development<br>& Graphic Design</i></h1>
-        <h5 class="text-2xl font-thin hover:underline">View Portfolio &#8594</h5>
-      </div>
-      
-
+        </nav>
     </div>
-  </section>
-  <section id="mobile-menu" class="app h-screen w-screen p-12 hidden absolute text-center top-0 left-0 z-10">
-    <div class="px-4 grid grid-cols-12">
-      <div class="col-span-10 flex flex-col justify-center h-full">
-        <div class="pt-2 space-y-4 sm:px-3 text-9xl">
-          <a href="#" class="block py-3" onclick="homePage()">Home</a>
+    <section id="home-page" class="app h-screen w-screen p-12 ">
 
-          <a href="#" class="block py-3" onclick="projectPage()">Projects</a>
+        <!--<div id="grad-ball-2"></div>
+    <div id="grad-ball-3"></div>-->
+        <!-- This example requires Tailwind CSS v2.0+ -->
 
-          <a href="#" class="block py-3" onclick="skillsPage()">Skills</a>
+        <div class="px-4 grid grid-cols-12">
+            <div class="col-span-10 flex flex-col justify-center h-full">
+                <h1 class="leading-none pb-10 text-9xl lg:text-8xl xl:text-9xl hero-text">Declan M <br><i>Website Development<br>& Graphic Design</i></h1>
+                <h5 onclick="projectPage()" class="text-3xl lg:text-2xl font-thin hover:underline">View Portfolio &#8594</h5>
+            </div>
 
-          <a href="#" class="block py-3"  onclick="contactPage()">Contact</a>
 
         </div>
-      </div>
-  </section>
-  <section id="project-page" class="app h-screen w-screen p-12 hidden absolute text-center top-0 left-0 flex flex-col justify-between">
-    <div class="px-4 grid grid-cols-12 pb-16 flex-grow">
-      <div class="col-span-10 flex flex-col justify-center h-full text-left">
-        <h2 class="text-9xl project-title"></h2>
-      </div>
-    </div>
-    <div class="px-4 grid grid-cols-12 pb-10 flex-shrink">
-      <div class="col-span-4 h-full text-left">
-        <p class="project-description text-xl"></p>
-      </div>
-      <div class="col-span-8 flex flex-col content-end flex-wrap">
-        <img class="project-img shadow-md mb-4 w-4/5" src="">
-        <h5 class="text-2xl font-thin w-4/5"><span class="cursor-pointer">&#8592</span> | <span
-            class="cursor-pointer">&#8594</span></h5>
-      </div>
-    </div>
-    <div class="px-4 grid grid-cols-12 flex-grow">
-      <div class="col-span-6 h-full text-left md:pr-10">
-        <h5 class="prev-proj text-2xl font-thin cursor-pointer hover:underline">&#8592 Previous Project</h5>
-      </div>
-      <div class="col-span-6 flex flex-row justify-end md:pl-10">
-        <h5 class="next-proj text-2xl font-thin cursor-pointer hover:underline">Next Project &#8594</h5>
-      </div>
-    </div>
-  </section>
-  <section id="skills-page" class="app h-screen w-screen p-12 ">
+    </section>
+    <section id="mobile-menu" class="app h-screen w-screen p-12 hidden absolute text-center top-0 left-0 z-10">
+        <div class="px-4 grid grid-cols-12">
+            <div class="col-span-10 flex flex-col justify-center h-full">
+                <div class="pt-2 space-y-4 sm:px-3 text-9xl">
+                    <a href="#" class="block py-3" onclick="homePage()">Home</a>
 
-  
-  </section>
-  <section id="contact-page" class="app h-screen w-screen p-12 ">
+                    <a href="#" class="block py-3" onclick="projectPage()">Projects</a>
 
+                    <a href="#" class="block py-3" onclick="skillsPage()">Skills</a>
 
-  </section>
-  <script src="js/script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script>
-  var gradients = {
-    start: 'rgba(131,196,235,1)',
-    end: 'rgba(99,226,198,1)'
-  }
-  
-  var el = document.querySelector('#grad-ball-1');
-  
-  var animation = anime({
-    targets: gradients,
-    start: 'rgba(99,226,198,1)',
-    end: 'rgba(131,196,235,1)',
-    rotate:0.01,
-    duration: 7000,
-    //easing: 'easeInOutQuad',
-    //round: 1,
-    loop: true,
-    direction: 'alternate',
-    update: function(a) {
-      var value1 = a.animations[0].currentValue;
-      var value2 = a.animations[1].currentValue;
-      el.style.backgroundImage = 'radial-gradient(circle, '+value1+' 0%, '+value2+' 42%, rgba(255,255,255,0.6348740179665616) 65%, rgba(255,255,255,0) 100%)'
-    }
-  });
-  anime({
-  targets: '#grad-ball-1',
-  translateX: [-500,600],
-  translateY:[-100,100],
-  scale:[1.2,1.5],
-  loop: true,
-  direction: 'alternate',
-  duration: 14000,
-  easing:'linear',
-  rotation:0.01
-});
-var menuClose = anime({
-  targets: '#menu-btn',
-  rotate:[405,0],
-  duration: 800,
-  easing:'spring',
-  loop: false,
-  autoplay: false,
-});
-var menuOpen = anime({
-  targets: '#menu-btn',
-  rotate:[0,405],
-  duration: 800,
-  easing:'spring',
-  loop: false,
-  autoplay: false,
-});
+                    <a href="#" class="block py-3" onclick="contactPage()">Contact</a>
 
-let menuBtn = document.getElementById('menu-btn');
-document.getElementById('menu-btn').addEventListener('click', () => {
-  if (menuBtn.classList.contains('menu-open')){
-  menuClose.play();
-  $('#mobile-menu').fadeOut(500);
-  menuBtn.classList.remove('menu-open');
-  $('.wasOpen').delay(400).fadeIn(500);
-  $('section:visible').removeClass('wasOpen');
-  }
-  else {
-    menuOpen.play();
-    $('section:visible').addClass('wasOpen');
-    $('section').fadeOut(500);
-    $('#mobile-menu').delay(400).fadeIn(500);
-    menuBtn.classList.add('menu-open')
-  }
-})
-$('#mobile-menu a').click(() => {
-  $('section').removeClass('wasOpen');
-  menuClose.play();
-  menuBtn.classList.remove('menu-open');
-})
-  </script>
+                </div>
+            </div>
+    </section>
+
+    <section id="project-page" class="app h-screen w-screen p-12 hidden absolute text-center top-0 left-0 flex flex-col justify-center">
+        <div class="px-4 grid grid-cols-12 pb-10 flex-shrink">
+            <div class="lg:col-span-4 col-span-12 h-full text-left flex flex-col justify-center">
+                <h3 class="lg:text-5xl text-8xl project-title pb-10"></h3>
+                <p class="project-description lg:text-base text-4xl pb-8"></p>
+                <div class="tags-container"></div>
+            </div>
+            <div class="lg:col-span-8 col-span-12 flex flex-col lg:content-end content-center flex-wrap">
+                <img class="project-img mb-4 lg:w-4/5 w-full" src="">
+                <h5 class="lg:text-2xl text-4xl font-thin lg:w-4/5 w-full"><span id="prevPortfolioImg" class="cursor-pointer">&#8592</span> | <span id="nextPortfolioImg" class="cursor-pointer">&#8594</span></h5>
+            </div>
+        </div>
+        <div class="px-4 grid grid-cols-12">
+            <div class="col-span-6 h-full text-left md:pr-10">
+                <h5 class="prev-proj lg:text-2xl text-4xl font-thin cursor-pointer hover:underline">&#8592 Previous Project</h5>
+            </div>
+            <div class="col-span-6 flex flex-row justify-end md:pl-10">
+                <h5 class="next-proj lg:text-2xl text-4xl font-thin cursor-pointer hover:underline">Next Project &#8594</h5>
+            </div>
+        </div>
+    </section>
+    <section id="skills-page" class="app h-screen w-screen hidden p-12 justify-center items-center flex-col">
+        <h3 class="text-6xl lg:text-4xl pb-10 xl:w-1/2 w-3/4" style="line-height:1.4em"><b>Specialist in JavaScript and WordPress</b> with 7 years experience working alongside businesses to build and maintain clean and compelling websites and web applications. My work includes everything from exciting web apps to large scale e-commerce
+            sites. </h3>
+        <div class="justify-between flex xl:w-1/2 w-3/4">
+            <div><img src="assets/wordpress-logo.png" class="max-h-16"></div>
+            <div><img src="assets/html5-icon.png" class="max-h-16"></div>
+            <div><img src="assets/css-icon.png" class="max-h-16"></div>
+            <div><img src="assets/js-icon.png" class="max-h-16"></div>
+            <div><img src="assets/php-icon.png" class="max-h-16"></div>
+            <div><img src="assets/vuejs-icon.png" class="max-h-16"></div>
+        </div>
+
+    </section>
+    <section id="contact-page" class="app h-screen w-screen p-12 hidden justify-center items-center flex-col">
+        <h3 class="lg:text-5xl text-8xl pb-10 lg:w-1/2 w-3/4" style="line-height:1.2em"><b>Contact Me</b></h3>
+        <a class="lg:text-5xl text-8xl pb-10 lg:w-1/2 w-3/4 hover:underline" href="mailto:hello@declanm.co.uk" style="">Email</a>
+        <a class="lg:text-5xl text-8xl pb-10 lg:w-1/2 w-3/4 hover:underline" href="https://www.linkedin.com/in/declan-morrisroe-43abb4145/" style="">LinkedIn</a>
+    </section>
 </body>
 
 </html>
