@@ -21,35 +21,47 @@ function contactPage() {
 $(document).ready(function() {
 
     let portfolioItems = [
+        PlaylistMix = {
+            title: "PlaylistMix",
+            description: "React web application which utilizes the Spotify API to generate bespoke playlists based on user specified criteria to aid the discovery of new music.",
+            images: ["assets/PlaylistMix-Portfolio-1.png", "assets/PlaylistMix-Portfolio-2.png"],
+            tags: ['React', 'Javascript', 'Tailwind'],
+            url: ''
+        },
         Shoefit = {
             title: "ShoeFit Fitting Assistant",
             description: "Built a custom WordPress plugin / application using jQuery and vanilla JavaScript which takes foot measurements and calculates the users correct shoe size. I worked alongside DCS Digital who built the back-end and created designs while I built the front-end solo. Conditional logic allowed users to specify foot shape and medical conditionss which were then used to filter website products to only suitable footwear.",
             images: ["assets/ShoeFitFinal1.png", "assets/ShoeFitFinal2.png", "assets/ShoeFitFinal3.png", "assets/ShoeFitFinal3half.png", "assets/ShoeFitFinal4.png"],
-            tags: ['Javascript', 'jQuery', 'WordPress']
+            tags: ['Javascript', 'jQuery', 'WordPress'],
+            url: 'https://shoefit.uk/'
         },
         AirToWoo = {
             title: "AirToWoo Web App",
             description: "SaaS Web application built primarily with JavaScript which connects AirTable with WooCommerce via API. This tool allows users to manage their WooCommerce products via an AirTable spreadsheet, and instantly save changes. I was tasked with writing all of the JavaScript which would send and receive webbooks, transform data, intelligently manage images and taxonomies, and much more.",
             images: ["assets/AirToWoo-Portfolio-1.png", "assets/AirToWoo-Portfolio-2.png"],
-            tags: ['JavaScript', 'WordPress', 'AirTable', 'SaaS']
+            tags: ['JavaScript', 'WordPress', 'AirTable', 'SaaS'],
+            url: 'https://www.dcsdigital.co.uk/airtowoo/'
         },
         Tokenomy = {
             title: "Tokenomy",
             description: "Built dynamic, multi-language blog site from a design sent by the client. Elementor and custom code were used in tandem to rapidly deploy a highly custom,  custom loop templates, multi-lingual, user permissions, etc.",
             images: ["assets/Tokenomy-laptop-port.png", "assets/TokenomyFinal2.png", "assets/TokenomyFinal3.png"],
-            tags: ['WordPress', 'Elementor']
+            tags: ['WordPress', 'Elementor'],
+            url: 'blog.tokenomy.com/'
         },
         DCS_Digital_Site = {
             title: "DCS Creative Site",
             description: "Worked from a design by DCS Digital. I built their 'creative' style portfolio featuring animations, transitions, hover effects, text effects, and much more. I used the Tailwind CSS framework on this project alongside AnimeJS to rapidly create a responsive, interactive website with fluid animations and transitions",
             images: ["assets/DCS-Portfolio-1.png", "assets/DCS-Portfolio-2.png", "assets/DCS-Portfolio-3.png"],
-            tags: ['JavaScript', 'Tailwind CSS', 'AnimeJS']
+            tags: ['JavaScript', 'Tailwind CSS', 'AnimeJS'],
+            url: ''
         },
         Emergency_Vet_247 = {
             title: "Emergency Vet 24/7",
             description: "Worked alongside client to create Veterinary practice location finder with custom filtering, map display, etc. The site was built with WordPress and AJAX based plugins",
             images: ["assets/Emergency-Vet-laptop-port.png", "assets/EmergencyVetFinal1.png"],
-            tags: ['WordPress', 'JavaScript', 'Elementor']
+            tags: ['WordPress', 'JavaScript', 'Elementor'],
+            url: 'https://emergencyvet247.com/'
         }
     ]
 
@@ -63,6 +75,7 @@ $(document).ready(function() {
         currentProject = portfolioItems[currentProjectNum];
         currentImageIndex = 0
         $('#project-page .project-title').text(currentProject.title);
+        $('#project-page .project-title').attr("href", currentProject.url ? currentProject.url : null);
         $('#project-page .project-description').text(currentProject.description);
         $('#project-page .project-img').attr("src", currentProject.images[currentImageIndex]);
         $('.tags-container').html('')
